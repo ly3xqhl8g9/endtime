@@ -1,5 +1,32 @@
-# Endtime
+<p align="center">
+    <img src="https://raw.githubusercontent.com/ly3xqhl8g9/endtime/master/about/identity/endtime-logo-night.png" height="250px">
+    <br />
+    <a target="_blank" href="https://github.com/ly3xqhl8g9/endtime/blob/master/LICENSE">
+        <img src="https://img.shields.io/badge/license-MIT-blue.svg?colorB=000000&style=for-the-badge" alt="License: MIT">
+    </a>
+</p>
 
+
+
+<h1 align="center">
+    endtime
+</h1>
+
+
+<h3 align="center">
+    Time as a Countdown to the End of Biological Life on Earth
+</h1>
+
+
+
+### Contents
+
++ [Considerations](#considerations)
++ [Implementations](#implementations)
+
+
+
+## Considerations
 
 In machinetime we use the [Unix time](https://en.wikipedia.org/wiki/Unix_time).
 
@@ -12,3 +39,11 @@ Shortly put: the Sun will probably engulf the Earth somewhere after the next 7 b
 An `endtime` Earth year is considered as a [sidereal year](https://en.wikipedia.org/wiki/Sidereal_year) of `365.256363004` [days](https://en.wikipedia.org/wiki/Ephemeris_day), or `365 days, 6 hours, 9 minutes, 9.76 seconds`.
 
 There are, of course, even more, further along endtimes, such as the endtime of the Galaxy, or even of the Universe, however, for now, it is best to think of what is in the 'near' future, the next 1 billion years.
+
+
+
+## Implementations
+
+`endtime` is implemented for:
+
++ [`JavaScript/TypeScript`](https://github.com/ly3xqhl8g9/endtime/tree/master/packages/endtime-javascript)
