@@ -1,0 +1,2 @@
+export const SIDEREAL_YEAR = 365.256363004;
+export const ENDTIME_YEARS = 1_000_000_000;
