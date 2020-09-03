@@ -1,16 +1,43 @@
+// #region imports
+    // #region external
+    import {
+        ENDTIME_UNIX_START,
+        ENDTIME_VOLUME,
+    } from '../../data/constants';
+    // #endregion external
+// #endregion imports
+
+
+
 // #region module
 class Endtime {
     public static now() {
         const endtime = new this();
-        return endtime.unixToEndtime(Date.now());
+
+        return endtime.unixToEndtime(
+            Math.floor(Date.now() / 1000)
+        );
     }
 
+    /**
+     * UNIX time (seconds) to endtime.
+     *
+     * @param value
+     */
     public unixToEndtime(
         value: number,
     ) {
-        return value;
+        const unixDifference = value - ENDTIME_UNIX_START;
+        const endtimeDifference = ENDTIME_VOLUME - unixDifference;
+
+        return endtimeDifference;
     }
 
+    /**
+     * Endtime to UNIX time (seconds)
+     *
+     * @param value
+     */
     public endtimeToUnix(
         value: number,
     ) {
