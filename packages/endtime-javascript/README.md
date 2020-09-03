@@ -30,7 +30,7 @@
 
 In machinetime we use the [Unix time](https://en.wikipedia.org/wiki/Unix_time).
 
-In many other time systems we arbitrarily consider a `point 0` and start counting from there. However, zooming to the solar system scale, we see that time is not a mere forward passage into an endless continuity, but it is in fact a countdown.
+In many other time systems we arbitrarily consider a `point 0` and start counting from there. However, zooming to the solar system scale, we observe that time is not a mere forward passage into an endless continuity, but it is in fact a countdown.
 
 The [end times](https://en.wikipedia.org/wiki/End_time), which almost all religions reflected upon in a non-data fundamented way, will come actually with the [future transformations](https://en.wikipedia.org/wiki/Future_of_Earth) of the Sun and of the Earth.
 
