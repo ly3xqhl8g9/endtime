@@ -4,24 +4,26 @@ import styled from 'styled-components';
 
 export const StyledPage = styled.div`
     font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-    height: 400px;
+    height: 500px;
     display: grid;
     place-content: center;
     text-align: center;
-
-    h1 {
-        font-size: 1.3rem;
-        margin: 1.5rem;
-    }
 `;
 
 
 export const StyledHeaderH1 = styled.h1`
-    font-size: 5rem;
+    font-size: 4rem;
+    margin: 2rem auto;
+    font-weight: normal;
 `;
 
 
 export const StyledHeaderH2 = styled.h2`
-    font-size: 3rem;
-    margin-bottom: 2rem;
+    font-size: 2.3rem;
+    font-weight: normal;
+`;
+
+
+export const StyledAbout = styled.div`
+    font-size: 0.8rem;
 `;

@@ -4,6 +4,7 @@ import {
     StyledPage,
     StyledHeaderH1,
     StyledHeaderH2,
+    StyledAbout,
 } from './styled';
 
 
@@ -25,8 +26,16 @@ const Page: React.FC<any> = (
             </StyledHeaderH2>
 
             <StyledHeaderH1>
-                31,558,149,763,545,599 seconds
+                31,558,149,763,545,599
             </StyledHeaderH1>
+
+            <StyledHeaderH2>
+                seconds
+            </StyledHeaderH2>
+
+            <StyledAbout>
+                about
+            </StyledAbout>
         </StyledPage>
     );
 }
