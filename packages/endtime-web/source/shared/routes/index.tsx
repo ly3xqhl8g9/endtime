@@ -30,31 +30,17 @@ const indexRoute: PluridRoute = {
     view: [
         '/plane',
     ],
-    // spaces: [
-    //     {
-    //         value: 'default',
-    //         universes: [
-    //             {
-    //                 value: 'default',
-    //                 clusters: [
-    //                     {
-    //                         value: 'default',
-    //                         planes: [
-    //                             {
-    //                                 value: '/page',
-    //                                 component: {
-    //                                     kind: 'react',
-    //                                     element: IndexPagePlane,
-    //                                 },
-    //                             },
-    //                         ],
-    //                     },
-    //                 ],
-    //             },
-    //         ],
-    //     },
-    // ],
-}
+    defaultConfiguration: {
+        elements: {
+            plane: {
+                controls: {
+                    show: false,
+                },
+                width: 0.7,
+            },
+        },
+    },
+};
 
 
 const staticRoute: PluridRoute = {

@@ -14,3 +14,14 @@ export const StyledPage = styled.div`
         margin: 1.5rem;
     }
 `;
+
+
+export const StyledHeaderH1 = styled.h1`
+    font-size: 5rem;
+`;
+
+
+export const StyledHeaderH2 = styled.h2`
+    font-size: 3rem;
+    margin-bottom: 2rem;
+`;

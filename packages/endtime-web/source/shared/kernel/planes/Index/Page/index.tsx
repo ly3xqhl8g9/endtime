@@ -2,6 +2,8 @@ import React from 'react';
 
 import {
     StyledPage,
+    StyledHeaderH1,
+    StyledHeaderH2,
 } from './styled';
 
 
@@ -18,13 +20,13 @@ const Page: React.FC<any> = (
     /** render */
     return (
         <StyledPage>
-            <div>
+            <StyledHeaderH2>
                 endtime in
-            </div>
+            </StyledHeaderH2>
 
-            <div>
+            <StyledHeaderH1>
                 31,558,149,763,545,599 seconds
-            </div>
+            </StyledHeaderH1>
         </StyledPage>
     );
 }
