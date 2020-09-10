@@ -1,4 +1,5 @@
 import React, {
+    useRef,
     useState,
     useEffect,
 } from 'react';
@@ -24,18 +25,30 @@ const Page: React.FC<any> = (
     //     plurid,
     // } = properties;
 
+    // #region references
+    const interval = useRef<null | number>(null);
+    // #endregion references
+
 
     // #region state
     const [
         endtime,
         setEndtime,
-    ] = useState(Endtime.now());
+    ] = useState(Endtime.now().toLocaleString());
     // #endregion state
 
 
     // #region effects
     useEffect(() => {
+        interval.current = setInterval(() => {
+            setEndtime(Endtime.now().toLocaleString());
+        }, 1000);
 
+        return () => {
+            if (interval.current) {
+                clearInterval(interval.current);
+            }
+        }
     }, []);
     // #endregion effects
 
@@ -48,7 +61,7 @@ const Page: React.FC<any> = (
             </StyledHeaderH2>
 
             <StyledHeaderH1>
-                31,558,149,763,545,599
+                {endtime}
             </StyledHeaderH1>
 
             <StyledHeaderH2>
