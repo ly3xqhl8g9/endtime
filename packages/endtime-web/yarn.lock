@@ -3053,6 +3053,11 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0, end-of-stream@^1.4.1:
   dependencies:
     once "^1.4.0"
 
+endtime@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/endtime/-/endtime-0.0.0.tgz#f1f37b5351a0001e2f50ba642fdd739d2e630540"
+  integrity sha512-z7mkJQ66U8NReqp7dY962iIUit6yX2G/5xDHvtalihEZ3MJioRcd7YCpq41VgNa7z080b6FDZvyfHUQfiHgw+A==
+
 enhanced-resolve@^4.0.0, enhanced-resolve@^4.1.1, enhanced-resolve@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-4.3.0.tgz#3b806f3bfafc1ec7de69551ef93cca46c1704126"
