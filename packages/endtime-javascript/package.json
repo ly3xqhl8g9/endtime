@@ -1,6 +1,6 @@
 {
     "name": "endtime",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Time as a Countdown to the End of Biological Life on Earth",
     "keywords": [
         "endtime"
@@ -23,8 +23,7 @@
         "node": ">=12.0.0"
     },
     "main": "distribution/index.js",
-    "module": "distribution/index.es.js",
-    "typings": "distribution/types/index.d.ts",
+    "typings": "distribution/index.d.ts",
     "bin": {
         "endtime": "binder/endtime"
     },
