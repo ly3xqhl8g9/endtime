@@ -1,5 +1,6 @@
 import React, {
     useState,
+    useEffect,
 } from 'react';
 
 import {
@@ -22,6 +23,21 @@ const Page: React.FC<any> = (
     // const {
     //     plurid,
     // } = properties;
+
+
+    // #region state
+    const [
+        endtime,
+        setEndtime,
+    ] = useState(Endtime.now());
+    // #endregion state
+
+
+    // #region effects
+    useEffect(() => {
+
+    }, []);
+    // #endregion effects
 
 
     /** render */
