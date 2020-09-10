@@ -54,7 +54,7 @@ const Head: React.FC<HeadProperties> = (
             <link rel="shortcut icon" sizes="192x192" href="/icon-192x192.png" />
             <meta name="theme-color" content="#272A30" />
 
-            <link rel="manifest" href="/manifest.json" />
+            <link rel="manifest" href="/site.webmanifest" />
 
             {canonicalURL && (
                 <link rel="canonical" href={canonicalURL} />
@@ -79,7 +79,7 @@ const Head: React.FC<HeadProperties> = (
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-status-bar-style" content="default" />
             <meta name="apple-mobile-web-app-title" content={titleValue} />
-            <link rel="apple-touch-icon" href="/icon-192x192.png" />
+            <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
             {/* MICROSOFT */}
             <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#456c77" />
