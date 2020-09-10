@@ -84,7 +84,7 @@ const options: PluridServerPartialOptions = {
     buildDirectory,
     open: openAtStart,
     debug,
-    serverName: 'Endtime',
+    serverName: 'Endtime Server',
 };
 
 const template: PluridServerTemplateConfiguration = {

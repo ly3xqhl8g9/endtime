@@ -30,14 +30,12 @@ const Head: React.FC<HeadProperties> = (
         canonicalURL,
     } = properties;
 
-    const titleValue = title || `Plurid' Application`;
-    const descriptionValue = description || 'explore web content in three dimensions';
-    const ogTitleValue = ogTitle || title || `Plurid' Application`;
-    const ogDescriptionValue = ogDescription || description || 'explore web content in three dimensions';
+    const titleValue = title || `endtime`;
+    const descriptionValue = description || 'Time as a Countdown to the End of Biological Life on Earth';
+    const ogTitleValue = ogTitle || title || `endtime`;
+    const ogDescriptionValue = ogDescription || description || 'Time as a Countdown to the End of Biological Life on Earth';
     const ogImageValue = ogImage || '/icon-192x192.png';
-    const ogURLValue = ogURL || 'https://plurid.com';
-
-    const apiDomain = 'https://api.plurid.com/graphql';
+    const ogURLValue = ogURL || 'https://endtime.bio';
 
 
     /** render */
@@ -50,9 +48,6 @@ const Head: React.FC<HeadProperties> = (
             <title>{titleValue}</title>
             <meta name="title" content={titleValue} />
             <meta name="description" content={descriptionValue} />
-
-            <link rel="preconnect" href={apiDomain} />
-            <link rel="dns-prefetch" href={apiDomain} />
 
             <link rel="icon" href="/favicon.ico" sizes="64x64" />
             <link rel="shortcut icon" type="image/png" href="/icon-192x192.png" />
