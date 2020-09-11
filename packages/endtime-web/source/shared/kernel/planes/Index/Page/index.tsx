@@ -53,6 +53,17 @@ const Page: React.FC<any> = (
     /** render */
     return (
         <StyledPage>
+            <div
+                style={{
+                    textAlign: 'center',
+                }}
+            >
+                <img
+                    src="https://raw.githubusercontent.com/ly3xqhl8g9/endtime/master/about/identity/endtime-logo-night.png"
+                    height="250px"
+                />
+            </div>
+
             <StyledHeaderH2>
                 endtime in
             </StyledHeaderH2>
