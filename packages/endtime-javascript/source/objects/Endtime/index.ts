@@ -28,7 +28,7 @@ class Endtime {
         value: number,
     ) {
         const unixDifference = value - ENDTIME_UNIX_START;
-        const endtimeDifference = ENDTIME_VOLUME - unixDifference;
+        const endtimeDifference = BigInt(ENDTIME_VOLUME) - BigInt(unixDifference);
 
         return endtimeDifference;
     }
