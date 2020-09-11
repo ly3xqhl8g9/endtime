@@ -15,7 +15,7 @@
 
 <h3 align="center">
     Time as a Countdown to the End of Biological Life on Earth
-</h1>
+</h3>
 
 
 
