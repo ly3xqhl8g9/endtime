@@ -8,6 +8,10 @@ import {
 } from 'endtime';
 
 import {
+    PluridLink,
+} from '@plurid/plurid-react';
+
+import {
     StyledPage,
     StyledHeaderH1,
     StyledHeaderH2,
@@ -62,7 +66,11 @@ const Page: React.FC<any> = (
             </StyledHeaderH2>
 
             <StyledAbout>
-                about
+                <PluridLink
+                    route="/about"
+                >
+                    about
+                </PluridLink>
             </StyledAbout>
         </StyledPage>
     );

@@ -26,5 +26,5 @@ export const StyledHeaderH2 = styled.h2`
 
 export const StyledAbout = styled.div`
     margin-top: 2rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 `;

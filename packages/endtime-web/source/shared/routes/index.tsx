@@ -5,6 +5,7 @@ import {
 } from '@plurid/plurid-data';
 
 import IndexPagePlane from '../kernel/planes/Index/Page';
+import AboutPlane from '../kernel/planes/About';
 import NotFoundPlane from '../kernel/planes/NotFound';
 import StaticPlane from '../kernel/planes/Static';
 
@@ -24,6 +25,13 @@ const indexRoute: PluridRoute = {
             component: {
                 kind: 'react',
                 element: IndexPagePlane,
+            },
+        },
+        {
+            value: '/about',
+            component: {
+                kind: 'react',
+                element: AboutPlane,
             },
         },
     ],
