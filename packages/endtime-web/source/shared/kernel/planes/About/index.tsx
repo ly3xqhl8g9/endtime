@@ -60,6 +60,9 @@ const About: React.FC<any> = (
                 <p>
                     <img src="https://raw.githubusercontent.com/ly3xqhl8g9/endtime/master/about/identity/endtime-logo-night.png" height="250px" />
                     <br />
+                    <a target="_blank" href="https://github.com/ly3xqhl8g9/endtime">
+                        <img src="https://img.shields.io/badge/code-github-blue.svg?colorB=000000&style=for-the-badge" alt="code" />
+                    </a>
                     <a target="_blank" href="https://github.com/ly3xqhl8g9/endtime/blob/master/LICENSE">
                         <img src="https://img.shields.io/badge/license-MIT-blue.svg?colorB=000000&style=for-the-badge" alt="License: MIT" />
                     </a>
