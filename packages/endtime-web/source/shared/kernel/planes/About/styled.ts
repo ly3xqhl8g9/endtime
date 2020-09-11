@@ -11,5 +11,9 @@ export const StyledAbout = styled.div`
         padding: 0 0.3rem;
     }
 
+    a {
+        color: #ccc;
+    }
+
     line-height: 1.4;
 `;
