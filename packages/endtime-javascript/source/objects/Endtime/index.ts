@@ -39,9 +39,12 @@ class Endtime {
      * @param value
      */
     public endtimeToUnix(
-        value: number,
+        value: bigint,
     ) {
-        return value;
+        const difference = BigInt(ENDTIME_VOLUME) - value;
+        const unixTime = ENDTIME_UNIX_START + Number(difference);
+
+        return unixTime;
     }
 
     public dateToEndtime(
