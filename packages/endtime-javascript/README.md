@@ -24,6 +24,8 @@
 
 + [Considerations](#considerations)
 + [Implementations](#implementations)
++ [Install](#install)
++ [Usage](#usage)
 
 
 
@@ -48,3 +50,33 @@ There are, of course, even more, further along endtimes, such as the endtime of 
 `endtime` is implemented for:
 
 + [`JavaScript/TypeScript`](https://github.com/ly3xqhl8g9/endtime/tree/master/packages/endtime-javascript)
+
+
+
+## Install
+
+In order to install the `endtime` package run
+
+``` bash
+npm install endtime
+```
+
+or
+
+``` bash
+yarn add endtime
+```
+
+
+
+## Usage
+
+``` typescript
+import {
+    Endtime,
+} from 'endtime';
+
+
+// `now` is a `bigint`
+const now = Endtime.now();
+```
