@@ -35,7 +35,7 @@ const Head: React.FC<HeadProperties> = (
     const ogTitleValue = ogTitle || title || `endtime`;
     const ogDescriptionValue = ogDescription || description || 'Time as a Countdown to the End of Biological Life on Earth';
     const ogImageValue = ogImage || '/icon-192x192.png';
-    const ogURLValue = ogURL || 'https://endtime.bio';
+    const ogURLValue = ogURL || 'https://endtime.life';
 
 
     /** render */
