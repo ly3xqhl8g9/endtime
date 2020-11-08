@@ -19,6 +19,14 @@ class Endtime {
         );
     }
 
+    public static supported() {
+        if (typeof BigInt === 'undefined') {
+            return false;
+        }
+
+        return true;
+    }
+
     /**
      * UNIX time (seconds) to endtime.
      *
@@ -27,7 +35,7 @@ class Endtime {
     public unixToEndtime(
         value: number,
     ) {
-        if (typeof BigInt === 'undefined') {
+        if (!Endtime.supported()) {
             return 0;
         }
 
@@ -45,7 +53,7 @@ class Endtime {
     public endtimeToUnix(
         value: bigint,
     ) {
-        if (typeof BigInt === 'undefined') {
+        if (!Endtime.supported()) {
             return 0;
         }
 
