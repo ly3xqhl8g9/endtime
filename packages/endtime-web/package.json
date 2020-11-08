@@ -48,7 +48,7 @@
         "@rollup/plugin-node-resolve": "^10.0.0",
         "cross-fetch": "^3.0.6",
         "dotenv": "^8.2.0",
-        "endtime": "^0.0.4",
+        "endtime": "^0.0.5",
         "graphql": "^15.4.0",
         "graphql-tag": "^2.11.0",
         "hammerjs": "^2.0.8",
