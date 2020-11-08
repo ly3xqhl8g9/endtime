@@ -27,6 +27,10 @@ class Endtime {
     public unixToEndtime(
         value: number,
     ) {
+        if (typeof BigInt === 'undefined') {
+            return 0;
+        }
+
         const unixDifference = value - ENDTIME_UNIX_START;
         const endtimeDifference = BigInt(ENDTIME_VOLUME) - BigInt(unixDifference);
 
@@ -41,6 +45,10 @@ class Endtime {
     public endtimeToUnix(
         value: bigint,
     ) {
+        if (typeof BigInt === 'undefined') {
+            return 0;
+        }
+
         const difference = BigInt(ENDTIME_VOLUME) - value;
         const unixTime = ENDTIME_UNIX_START + Number(difference);
 
