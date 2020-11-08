@@ -24,9 +24,8 @@ const getCount = async () => {
     try {
         const response = await fetch('/count?kind=json');
         const data = await response.json();
-        const parsed = JSON.parse(data);
 
-        return parsed.now;
+        return data.now;
     } catch (error) {
         return '';
     }

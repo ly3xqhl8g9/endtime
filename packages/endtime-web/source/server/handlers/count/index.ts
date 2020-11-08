@@ -28,7 +28,7 @@ const handleCount = (
                 now: now.toLocaleString(),
             };
 
-            response.json(JSON.stringify(data));
+            response.json(data);
             return;
         }
 
