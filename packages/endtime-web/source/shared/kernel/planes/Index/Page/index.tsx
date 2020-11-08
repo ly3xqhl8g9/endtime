@@ -24,8 +24,9 @@ const getCount = async () => {
     try {
         const response = await fetch('/count?kind=json');
         const data = await response.json();
+        const parsed = JSON.parse(data);
 
-        return data.now;
+        return parsed.now;
     } catch (error) {
         return '';
     }
@@ -45,9 +46,10 @@ const Page: React.FC<any> = (
     const [
         endtime,
         setEndtime,
-    ] = useState(Endtime.supported()
-        ? Endtime.now().toLocaleString()
-        : 0
+    ] = useState(
+        Endtime.supported()
+            ? Endtime.now().toLocaleString()
+            : 0
     );
     // #endregion state
 
