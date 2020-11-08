@@ -20,6 +20,18 @@ import {
 
 
 
+const getCount = async () => {
+    try {
+        const response = await fetch('/count?kind=json');
+        const data = await response.json();
+
+        return data.now;
+    } catch (error) {
+        return '';
+    }
+}
+
+
 const Page: React.FC<any> = (
     properties,
 ) => {
@@ -33,14 +45,22 @@ const Page: React.FC<any> = (
     const [
         endtime,
         setEndtime,
-    ] = useState(Endtime.now().toLocaleString());
+    ] = useState(Endtime.supported()
+        ? Endtime.now().toLocaleString()
+        : 0
+    );
     // #endregion state
 
 
     // #region effects
     useEffect(() => {
-        const interval = setInterval(() => {
-            setEndtime(Endtime.now().toLocaleString());
+        const interval = setInterval(async () => {
+            if (Endtime.supported()) {
+                setEndtime(Endtime.now().toLocaleString());
+            } else {
+                const value = await getCount();
+                setEndtime(value);
+            }
         }, 1000);
 
         return () => {
