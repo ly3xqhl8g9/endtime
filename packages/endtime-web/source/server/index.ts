@@ -85,6 +85,9 @@ const options: PluridServerPartialOptions = {
     open: openAtStart,
     debug,
     serverName: 'Endtime Server',
+    ignore: [
+        '/count',
+    ],
 };
 
 const template: PluridServerTemplateConfiguration = {
