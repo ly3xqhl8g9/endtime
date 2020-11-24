@@ -1,10 +1,13 @@
+// #region imports
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import sourceMaps from 'rollup-plugin-sourcemaps';
 import typescript from 'rollup-plugin-typescript2';
+// #endregion imports
 
 
 
+// #region exports
 export default {
     input: `source/index.ts`,
     output: [
@@ -15,14 +18,6 @@ export default {
         },
     ],
     external: [
-        'fs',
-        'path',
-        'util',
-        'http',
-        'stream',
-        'https',
-        'url',
-        'zlib',
     ],
     watch: {
         include: 'source/**',
@@ -38,4 +33,5 @@ export default {
             useTsconfigDeclarationDir: true,
         }),
     ],
-}
+};
+// #endregion exports

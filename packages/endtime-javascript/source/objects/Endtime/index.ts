@@ -15,7 +15,7 @@ class Endtime {
         const endtime = new this();
 
         return endtime.unixToEndtime(
-            Math.floor(Date.now() / 1000)
+            Math.floor(Date.now() / 1000),
         );
     }
 
