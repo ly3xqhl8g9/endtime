@@ -66,13 +66,18 @@ class Endtime {
     public dateToEndtime(
         date: Date,
     ) {
-        return 0;
+        const unixTime = Math.floor(date.getTime() / 1000);
+
+        return this.unixToEndtime(unixTime);
     }
 
     public endtimeToDate(
-        value: number,
+        value: bigint,
     ) {
-        return 0;
+        const unix = this.endtimeToUnix(value);
+        const date = new Date(unix);
+
+        return date;
     }
 }
 // #endregion module
