@@ -1,7 +1,7 @@
 {
     "name": "endtime-web",
-    "version": "0.0.0",
-    "description": "web plurid' web application",
+    "version": "0.0.0-0",
+    "description": "endtime plurid' web application",
     "author": "ly3xqhl8g9 <ly3xqhl8g9@plurid.com> (https://plurid.com)",
     "private": true,
     "main": "build/index.js",
