@@ -1,3 +1,4 @@
+// #region module
 export const SIDEREAL_HOUR_SECONDS = 60 * 60;
 export const SIDEREAL_DAY_SECONDS = 24 * SIDEREAL_HOUR_SECONDS;
 export const SIDEREAL_YEAR_DAYS = 365.256363004;
@@ -7,3 +8,4 @@ export const ENDTIME_YEARS = 1_000_000_000;
 export const ENDTIME_VOLUME = ENDTIME_YEARS * SIDEREAL_YEAR_SECONDS;
 
 export const ENDTIME_UNIX_START = 1602288000;
+// #endregion module
