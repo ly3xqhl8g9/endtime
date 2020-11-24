@@ -31,7 +31,7 @@
         "distribution",
         "binder"
     ],
-    "preferGlobal": false,
+    "preferGlobal": true,
     "scripts": {
         "test": "jest -c ./configurations/jest.config.js ./source",
         "watch": "rollup -c ./scripts/rollup.config.js -w",
