@@ -675,10 +675,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.6.3.tgz#cc4f979548ca4d8e7b90bc0180052ab99ee64224"
   integrity sha512-pC/hkcREG6YfDfui1FBmj8e20jFU5Exjw4NYDm8kEdrW+mOh0T1Zve8DWKnS7ZIZvgncrctcNCXF4Q2I+loyww==
 
-"@types/node@^14.14.9":
-  version "14.14.9"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.9.tgz#04afc9a25c6ff93da14deabd65dc44485b53c8d6"
-  integrity sha512-JsoLXFppG62tWTklIoO4knA+oDTYsmqWxHRvd4lpmfQRNhX6osheUOWETP2jMoV/2bEHuMra8Pp3Dmo/stBFcw==
+"@types/node@^14.14.10":
+  version "14.14.10"
+  resolved "https://npm.plurid.cloud/@types%2fnode/-/node-14.14.10.tgz#5958a82e41863cfc71f2307b3748e3491ba03785"
+  integrity sha512-J32dgx2hw8vXrSbu4ZlVhn1Nm3GbeCFNw2FWL8S5QKucHGY0cyNwjdQdO+KMBZ4wpmC7KhLCiNsdk1RFRIYUQQ==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -3620,10 +3620,10 @@ rollup-plugin-typescript2@^0.29.0:
     resolve "1.17.0"
     tslib "2.0.1"
 
-rollup@^2.33.3:
-  version "2.33.3"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.33.3.tgz#ae72ce31f992b09a580072951bfea76e9df17342"
-  integrity sha512-RpayhPTe4Gu/uFGCmk7Gp5Z9Qic2VsqZ040G+KZZvsZYdcuWaJg678JeDJJvJeEQXminu24a2au+y92CUWVd+w==
+rollup@^2.34.0:
+  version "2.34.0"
+  resolved "https://npm.plurid.cloud/rollup/-/rollup-2.34.0.tgz#ecc7f1d4ce2cb88bb51bec2f56b984f3c35b8271"
+  integrity sha512-dW5iLvttZzdVehjEuNJ1bWvuMEJjOWGmnuFS82WeKHTGXDkRHQeq/ExdifkSyJv9dLcR86ysKRmrIDyR6O0X8g==
   optionalDependencies:
     fsevents "~2.1.2"
 
