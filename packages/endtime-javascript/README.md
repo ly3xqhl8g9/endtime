@@ -20,12 +20,17 @@
 
 
 
+<br />
+
+
+
 ### Contents
 
 + [Considerations](#considerations)
 + [Implementations](#implementations)
 + [Install](#install)
 + [Usage](#usage)
++ [Codeophon](#codeophon)
 
 
 
@@ -80,3 +85,10 @@ import {
 // `now` is a `bigint`
 const now = Endtime.now();
 ```
+
+
+
+## [Codeophon](https://github.com/ly3xqhl8g9/codeophon)
+
++ licensing: [delicense](https://github.com/ly3xqhl8g9/delicense)
++ versioning: [αver](https://github.com/ly3xqhl8g9/alpha-versioning)

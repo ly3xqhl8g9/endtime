@@ -20,10 +20,15 @@
 
 
 
+<br />
+
+
+
 ### Contents
 
 + [Considerations](#considerations)
 + [Implementations](#implementations)
++ [Codeophon](#codeophon)
 
 
 
@@ -48,3 +53,10 @@ There are, of course, even more, further along endtimes, such as the endtime of 
 `endtime` is implemented for:
 
 + [`JavaScript/TypeScript`](https://github.com/ly3xqhl8g9/endtime/tree/master/packages/endtime-javascript)
+
+
+
+## [Codeophon](https://github.com/ly3xqhl8g9/codeophon)
+
++ licensing: [delicense](https://github.com/ly3xqhl8g9/delicense)
++ versioning: [αver](https://github.com/ly3xqhl8g9/alpha-versioning)
