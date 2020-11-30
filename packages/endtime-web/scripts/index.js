@@ -95,13 +95,13 @@ const commandTest = [
 const commandContainerizeProduction = [
     ...commandLint,
     ...commandTest,
-    'docker build -t pluridapp -f ./configurations/production.dockerfile .',
+    `docker build -t endtime -f ./configurations/production.dockerfile --build-arg NPM_TOKEN="${process.env.NPM_TOKEN}" --build-arg NPM_REGISTRY="${process.env.NPM_REGISTRY}" .`,
 ];
 
 const commandContainerizeProductionStills = [
     ...commandLint,
     ...commandTest,
-    'docker build -t pluridapp -f ./configurations/production.stills.dockerfile .',
+    'docker build -t endtime -f ./configurations/production.stills.dockerfile .',
 ];
 
 const commandBuildClientDevelopment = [
