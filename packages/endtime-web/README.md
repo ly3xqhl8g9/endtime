@@ -28,6 +28,7 @@
 
 + [Considerations](#considerations)
 + [Implementations](#implementations)
++ [Building](#building)
 + [Codeophon](#codeophon)
 
 
@@ -53,6 +54,16 @@ There are, of course, even more, further along endtimes, such as the endtime of 
 `endtime` is implemented for:
 
 + [`JavaScript/TypeScript`](https://github.com/ly3xqhl8g9/endtime/tree/master/packages/endtime-javascript)
+
+
+
+## Building
+
+In order to use a custom `npm` registry, provide the following environment variables
+
+```
+NPM_TOKEN=<value> NPM_REGISTRY=<value> yarn containerize.production
+```
 
 
 
