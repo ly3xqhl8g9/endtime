@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:12 AS builder
+FROM node:14-alpine AS builder
 
 WORKDIR /app
 
@@ -13,7 +13,7 @@ RUN yarn build.production
 
 
 
-FROM mhart/alpine-node:12
+FROM node:14-alpine
 
 WORKDIR /app
 
