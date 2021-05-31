@@ -65,6 +65,16 @@ In order to use a custom `npm` registry, provide the following environment varia
 NPM_TOKEN=<value> NPM_REGISTRY=<value> yarn containerize.production
 ```
 
+or run
+
+```
+docker build \
+    -f ./configurations/production.dockerfile \
+    --build-arg NPM_TOKEN \
+    -t endtime \
+    .
+```
+
 
 
 ## [Codeophon](https://github.com/ly3xqhl8g9/codeophon)
