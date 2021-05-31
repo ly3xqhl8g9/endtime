@@ -77,7 +77,7 @@ const About: React.FC<any> = (
                 </h3>
             </div>
 
-            <ReactMarkdown source={input} />
+            <ReactMarkdown children={input} />
         </StyledAbout>
     );
 }
