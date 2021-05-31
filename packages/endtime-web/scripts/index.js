@@ -20,13 +20,16 @@ const environment = {
     local: !command.includes('development') && !command.includes('production'),
 };
 
-require('dotenv').config({
-    path: environment.production
-        ? './environment/.env.production'
-        : environment.development
-            ? './environment/.env.development'
-            : './environment/.env.local',
-});
+try {
+    require('dotenv').config({
+        path: environment.production
+            ? './environment/.env.production'
+            : environment.development
+                ? './environment/.env.development'
+                : './environment/.env.local',
+    });
+} catch (error) {
+}
 
 
 
@@ -95,13 +98,13 @@ const commandTest = [
 const commandContainerizeProduction = [
     ...commandLint,
     ...commandTest,
-    `docker build -t endtime -f ./configurations/production.dockerfile --build-arg NPM_TOKEN="${process.env.NPM_TOKEN}" --build-arg NPM_REGISTRY="${process.env.NPM_REGISTRY}" .`,
+    'docker build -t pluridapp -f ./configurations/production.dockerfile .',
 ];
 
 const commandContainerizeProductionStills = [
     ...commandLint,
     ...commandTest,
-    'docker build -t endtime -f ./configurations/production.stills.dockerfile .',
+    'docker build -t pluridapp -f ./configurations/production.stills.dockerfile .',
 ];
 
 const commandBuildClientDevelopment = [
