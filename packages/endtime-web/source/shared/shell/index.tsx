@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-    PluridComponent,
+    PluridReactComponent,
 } from '@plurid/plurid-react';
 
 import {
@@ -34,10 +34,7 @@ const Shell: React.FC<ShellProperties> = (
 }
 
 
-const shell: PluridComponent = {
-    kind: 'react',
-    element: Shell,
-};
+const shell: PluridReactComponent = Shell;
 
 
 export default shell;

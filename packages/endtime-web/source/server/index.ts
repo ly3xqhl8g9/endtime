@@ -1,30 +1,46 @@
-import PluridServer, {
-    PluridServerMiddleware,
-    PluridServerService,
-    PluridServerServicesData,
-    PluridServerPartialOptions,
-    PluridServerTemplateConfiguration,
-} from '@plurid/plurid-react-server';
-
-import helmet from '#kernel-services/helmet';
-
-/** uncomment to use services */
-import reduxStore from '#kernel-services/state/store';
-import apolloClient from '#kernel-services/graphql/client';
-
-import {
-    routes,
-    shell,
-} from '../shared';
-
-import preserves from './preserves';
-
-import {
-    setRouteHandlers,
-} from './handlers';
+// #region imports
+    // #region libraries
+    import PluridServer, {
+        PluridServerMiddleware,
+        PluridServerService,
+        PluridServerPartialOptions,
+        PluridServerTemplateConfiguration,
+    } from '@plurid/plurid-react-server';
+    // #endregion libraries
 
 
+    // #region external
+    import helmet from '~kernel-services/helmet';
 
+    import reduxStore from '~kernel-services/state/store';
+    import reduxContext from '~kernel-services/state/context';
+
+    import apolloClient from '~kernel-services/graphql/client';
+
+    import {
+        shell,
+        routes,
+    } from '~shared/index';
+
+    import {
+        APPLICATION_ROOT,
+    } from '~shared/data/constants';
+    // #endregion external
+
+
+    // #region internal
+    import preserves from './preserves';
+
+    import {
+        setRouteHandlers,
+        setPttpCors,
+    } from './handlers';
+    // #endregion internal
+// #endregion imports
+
+
+
+// #region module
 /** ENVIRONMENT */
 const watchMode = process.env.PLURID_WATCH_MODE === 'true';
 const isProduction = process.env.ENV_MODE === 'production';
@@ -34,15 +50,19 @@ const port = process.env.PORT || 63000;
 
 
 /** CONSTANTS */
-const applicationRoot = 'plurid-app';
 const openAtStart = watchMode
     ? false
     : isProduction
         ? false
         : true;
-const debug = isProduction
-    ? 'info'
-    : 'error';
+
+const quiet = false;
+// const debug = isProduction
+//     ? 'info'
+//     : 'error';
+const debug = 'info';
+
+const usePTTP = true;
 
 
 
@@ -61,28 +81,30 @@ const middleware: PluridServerMiddleware[] = [
 /** Services to be used in the application. */
 const services: PluridServerService[] = [
     /** uncomment to use services */
-    // [START apollo service]
-    'Apollo',
-    // [END apollo service]
-    // [START redux service]
-    'Redux',
-    // [END redux service]
-    // [START stripe service]
-    // 'Stripe',
-    // [END stripe service]
+    {
+        name: 'Apollo',
+        package: '@apollo/client',
+        provider: 'ApolloProvider',
+        properties: {
+            client: apolloClient,
+        },
+    },
+    {
+        name: 'Redux',
+        package: 'react-redux',
+        provider: 'Provider',
+        properties: {
+            store: reduxStore({}),
+            context: reduxContext,
+        },
+    },
 ];
 
-
-const servicesData: PluridServerServicesData = {
-    /** uncomment to use services */
-    apolloClient,
-    reduxStore,
-    reduxStoreValue: {},
-};
 
 const options: PluridServerPartialOptions = {
     buildDirectory,
     open: openAtStart,
+    quiet,
     debug,
     serverName: 'Endtime Server',
     ignore: [
@@ -91,7 +113,7 @@ const options: PluridServerPartialOptions = {
 };
 
 const template: PluridServerTemplateConfiguration = {
-    root: applicationRoot,
+    root: APPLICATION_ROOT,
 };
 
 
@@ -100,21 +122,23 @@ const template: PluridServerTemplateConfiguration = {
 // generate server
 const pluridServer = new PluridServer({
     helmet,
+    shell,
     routes,
     preserves,
-    shell,
     styles,
     middleware,
     services,
-    servicesData,
     options,
     template,
+    usePTTP,
 });
 
 
 // handle non-GET or custom routes (such as API requests, or anything else)
 setRouteHandlers(pluridServer);
 
+// if using PTTP
+setPttpCors(pluridServer);
 
 
 /**
@@ -127,6 +151,10 @@ setRouteHandlers(pluridServer);
 if (require.main === module) {
     pluridServer.start(port);
 }
+// #endregion module
 
 
+
+// #region exports
 export default pluridServer;
+// #endregion exports

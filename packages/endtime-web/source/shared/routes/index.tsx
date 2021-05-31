@@ -1,38 +1,28 @@
 import React from 'react';
 
 import {
-    PluridRoute,
-} from '@plurid/plurid-data';
+    PluridReactRoute,
+} from '@plurid/plurid-react';
 
 import IndexPagePlane from '../kernel/planes/Index/Page';
 import AboutPlane from '../kernel/planes/About';
 import NotFoundPlane from '../kernel/planes/NotFound';
-import StaticPlane from '../kernel/planes/Static';
 
 import Head from '../kernel/components/Head';
 
 
 
-const indexRoute: PluridRoute = {
+const indexRoute: PluridReactRoute = {
     value: '/',
-    exterior: {
-        kind: 'react',
-        element: Head,
-    },
+    exterior: Head,
     planes: [
         {
             value: '/plane',
-            component: {
-                kind: 'react',
-                element: IndexPagePlane,
-            },
+            component: IndexPagePlane,
         },
         {
             value: '/about',
-            component: {
-                kind: 'react',
-                element: AboutPlane,
-            },
+            component: AboutPlane,
         },
     ],
     view: [
@@ -51,97 +41,14 @@ const indexRoute: PluridRoute = {
 };
 
 
-const staticRoute: PluridRoute = {
-    value: '/static',
-    exterior: {
-        kind: 'react',
-        element: StaticPlane,
-    },
-};
 
-
-const planesRoute: PluridRoute = {
-    value: '/planes',
-    exterior: {
-        kind: 'react',
-        element: () => (
-            <Head
-                title="Planes | Plurid' Application"
-            />
-        ),
-    },
-    planes: [
-        {
-            value: '/plane-1',
-            component: {
-                kind: 'react',
-                element: () => (<div>plane 1</div>),
-            },
-        },
-        {
-            value: '/plane-2',
-            component: {
-                kind: 'react',
-                element: () => (<div>plane 2</div>),
-            },
-            link: '/planes/plane-2',
-        },
-    ],
-    view: [
-        '/plane-1',
-    ],
-    defaultConfiguration: {
-        global: {
-            theme: 'plurid',
-        },
-        space: {
-            opaque: false,
-            center: true,
-        },
-        elements: {
-            plane: {
-                controls: {
-                    show: false,
-                },
-                width: typeof window !== 'undefined'
-                    ? window.innerWidth < 800 ? 1 : 0.5
-                    : undefined,
-            },
-            viewcube: {
-                show: typeof window !== 'undefined'
-                    ? window.innerWidth < 800 ? false
-                    : true : undefined,
-            },
-        },
-    },
-};
-
-
-const parametricRoute: PluridRoute = {
-    value: '/parametric/:parameter',
-    parameters: {
-        parameter: {
-            length: 10,
-            lengthType: '==',
-        },
-    },
-    exterior: {
-        kind: 'react',
-        element: StaticPlane,
-    },
-};
-
-
-const notFoundRoute: PluridRoute = {
+const notFoundRoute: PluridReactRoute = {
     value: '/not-found',
-    exterior: {
-        kind: 'react',
-        element: () => (
-            <Head
-                title="Not Found | Plurid' Application"
-            />
-        ),
-    },
+    exterior: () => (
+        <Head
+            title="not found · endtime"
+        />
+    ),
     spaces: [
         {
             value: 'default',
@@ -154,10 +61,7 @@ const notFoundRoute: PluridRoute = {
                             planes: [
                                 {
                                     value: '/',
-                                    component: {
-                                        kind: 'react',
-                                        element: NotFoundPlane,
-                                    },
+                                    component: NotFoundPlane,
                                 },
                             ],
                         },
@@ -169,11 +73,8 @@ const notFoundRoute: PluridRoute = {
 };
 
 
-const routes: PluridRoute[] = [
+const routes: PluridReactRoute[] = [
     indexRoute,
-    staticRoute,
-    planesRoute,
-    parametricRoute,
     notFoundRoute,
 ];
 
