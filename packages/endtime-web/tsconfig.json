@@ -8,25 +8,43 @@
 
         "baseUrl": ".",
         "paths": {
-            "#kernel-assets/*": [
+            "~client/*": [
+                "./source/client/*"
+            ],
+            "~public/*": [
+                "./source/public/*"
+            ],
+            "~server/*": [
+                "./source/server/*"
+            ],
+            "~shared/*": [
+                "./source/shared/*"
+            ],
+            "~kernel/*": [
+                "./source/shared/kernel/*"
+            ],
+            "~kernel-assets/*": [
                 "./source/shared/kernel/assets/*"
             ],
-            "#kernel-components/*": [
+            "~kernel-components/*": [
                 "./source/shared/kernel/components/*"
             ],
-            "#kernel-containers/*": [
+            "~kernel-containers/*": [
                 "./source/shared/kernel/containers/*"
             ],
-            "#kernel-data/*": [
+            "~kernel-data/*": [
                 "./source/shared/kernel/data/*"
             ],
-            "#kernel-services/*": [
+            "~kernel-planes/*": [
+                "./source/shared/kernel/planes/*"
+            ],
+            "~kernel-services/*": [
                 "./source/shared/kernel/services/*"
             ],
-            "#routes/*": [
+            "~routes/*": [
                 "./source/shared/routes/*"
             ],
-            "#shell/*": [
+            "~shell/*": [
                 "./source/shared/shell/*"
             ],
         },
