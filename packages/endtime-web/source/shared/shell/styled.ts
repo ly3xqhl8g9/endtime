@@ -1,9 +1,21 @@
-import {
-    createGlobalStyle,
-} from 'styled-components';
+// #region internal
+    // #region libraries
+    import {
+        createGlobalStyle,
+    } from 'styled-components';
+    // #endregion libraries
+
+
+    // #region external
+    import {
+        APPLICATION_ROOT,
+    } from '~shared/data/constants';
+    // #endregion external
+// #endregion internal
 
 
 
+// #region module
 export const GlobalStyle = createGlobalStyle`
     *, *::after, *::before {
         box-sizing: border-box;
@@ -30,8 +42,9 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
     }
 
-    #plurid-app {
+    #${APPLICATION_ROOT} {
         height: 100%;
         overflow: auto;
     }
 `;
+// #endregion module
